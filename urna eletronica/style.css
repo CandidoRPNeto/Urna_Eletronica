@@ -1,0 +1,15 @@
+body{
+    margin: 0
+}
+.tela{
+    width: 450px;
+    height: 320;
+    background: linear-gradient(to right, #E8E8E8, #C1C1C1)
+}
+.urna{
+    background-color: #dbd5c9;
+    padding: 30px;
+}
+.teclado{
+    background-color: #403A3A;
+}
