@@ -1,15 +1,23 @@
+@keyframes pisca {
+    0% {opacity: 0.2;}
+    50% {opacity: 1;}
+    100% {opacity: 0.2;}
+}
+
 body{
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    font-family: Arial, Helvetica, sans-serif;
 }
 .tela{
     width: 550px;
     height: 345px;
     border: 9px solid #403A3A;
-    background: linear-gradient(to right, #E8E8E8, #C1C1C1)
+    background: linear-gradient(to right, #E8E8E8, #C1C1C1);
+    display: flex;
+    flex-direction: column;
 }
 .urna{
     background-color: #dbd5c9;
@@ -42,20 +50,71 @@ body{
     background-color: white;
     color: black;
     font-size: 25px;
-    width: 140px;
-    height: 70px;
+    width: 130px;
+    height: 65px;
 }
 .botao-verde{
     background-color: green;
     color: black;
     font-size: 25px;
-    width: 140px;
-    height: 70px;
+    width: 160px;
+    height: 80px;
 }
-.botao-vermelho{
-    background-color: red;
+.botao-laranja{
+    background-color: orangered;
     color: black;
     font-size: 25px;
-    width: 140px;
-    height: 70px;
+    width: 130px;
+    height: 65px;
+}
+.tela-d-1{
+    flex: 1;
+    display: flex;
+}
+.tela-d-1-l{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+.tela-d-1-l-1{
+   height: 50px;
+   display: flex;
+   align-items: center; 
+}
+.tela-d-1-l-2{
+    height: 50px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+.tela-d-1-l-3{
+    height: 50px;
+}
+.numero{
+    display: inline-block;
+    width: 40px;
+    height: 50px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 50px;
+    font-size: 40px;
+}
+.pisca{
+   animation-name: pisca;
+   animation-duration: 0.4s;
+   animation-iteration-count: infinite; 
+}
+.tela-d-1-l-4{
+    flex: 1;
+    line-height: 30px;
+}
+.tela-d-1-r{
+    width: 100px;
+}
+.tela-d-2{
+    height: 50px;
+    font-size: 15px;
+    border-top: 2px solid #000;
+    padding-left: 10px;
 }
