@@ -1,5 +1,5 @@
 @keyframes pisca {
-    0% {opacity: 0.2;}
+    0% {opacity: 0.4;}
     50% {opacity: 1;}
     100% {opacity: 0.2;}
 }
@@ -71,11 +71,30 @@ body{
     flex: 1;
     display: flex;
 }
+.tela-d-1-r{
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.tela-d-1-r-i{
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+}
+.tela-d-1-r-i img{
+    width: 100%;
+}
+.tela-d-1-r-i.small{
+    width: 80%;
+    font-size: 12px;
+}
 .tela-d-1-l{
     flex: 1;
     display: flex;
     flex-direction: column;
     padding-left: 10px;
+    font-size: 14px;
 }
 .tela-d-1-l-1{
    height: 50px;
