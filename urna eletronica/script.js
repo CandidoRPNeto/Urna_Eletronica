@@ -25,7 +25,17 @@ function comecarEtapa() {
 }
 
 function clicou(n){
-    alert("Clicou em "+n);
+    let num = document.querySelector('.numero.pisca')
+    if (num != null){
+        num.innerHTML = n;
+        numeroPreenchimento += n;
+        num.classList.remove('pisca');
+        let next = num.nextElementSibling;
+        if(next != null)
+            next.classList.add('pisca');
+        else
+            atualizarInterface();
+    }
 }
 function branco(){
     alert("Clicou em Branco");
@@ -38,7 +48,26 @@ function confirma(){
 }
 
 function atualizarInterface(){
-    
+    let etapa = etapas[etapaAtual];
+    let candidato = etapa.candidatos.filter((itens) => {
+        if(itens.numero == numeroPreenchimento)
+            return true;
+        else
+            return false;
+    });
+    if (candidato.length > 0){
+        candidato = candidato[0];
+        seuVotoPara.style.display = 'block';
+        aviso.style.display = 'block';
+        descricao.innerHTML = 'Nome: ' + candidato.nome + '<br/>' +
+        'Partido: ' + candidato.partido + '<br/>';
+        let ftsHTML = '';
+        for (let i in candidato.fotos){
+            ftsHTML += ' <div class="tela-d-1-r-i"><img src="Imagens/' +
+            candidato.fotos[i].url + '" alt=""/>' + candidato.fotos[i].legenda + '</div>'
+        }
+        lateralComImg.innerHTML = ftsHTML;
+    }
 }
 
 comecarEtapa();

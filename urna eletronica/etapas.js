@@ -4,7 +4,7 @@ let etapas = [
         numeros: 5,
         candidatos: [
             {
-                numero: 66664,
+                numero: '66664',
                 nome: 'Mario',
                 partido: 'Nintendo',
                 fotos: [
@@ -18,7 +18,7 @@ let etapas = [
         numeros: 2,
         candidatos: [
             {
-                numero: 56,
+                numero: '56',
                 nome: 'Mokey D. Luffy',
                 partido: 'Borracha',
                 vice: 'Homem Borracha',
